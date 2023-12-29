@@ -1,0 +1,101 @@
+.navbar {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: box-shadow 0.3s ease;
+    background-color: var(--primary-bg-color);
+    color: #fff;
+}
+
+.contact-us{
+    padding: 6px 8px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--pink-color);
+}
+
+.navbar_bottom{
+    background-color: var(--secondary-bg-color);
+}
+
+.thin-text ul{
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.6px;
+    font-size: 14px;
+}
+
+.new-update{
+    background-color: var(--dark-blue-color);
+}
+
+.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.right > nav > ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    margin-right: 16px;
+    justify-content: space-between;
+}
+
+ul > li {
+    list-style: none;
+}
+
+ul > li > a {
+    padding: 6px;
+    margin-right: 2px;
+}
+
+ul > li > a:hover {
+    text-decoration: underline !important;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    display: none;
+    right: -1000px;
+    width: 320px;
+    height: 100%;
+    background-color: var(--primary-bg-color);
+    transition: right 0.3s ease;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
+    }
+    .sidebar{
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
