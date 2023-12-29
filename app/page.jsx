@@ -19,7 +19,7 @@ export default function Home({children}) {
   };
   return (
     <div className="home_section">
-      <Notification />
+      <Notification title="-V.1.0.0 About this version" point1="Website is under development" point2="This is a sample notification"/>
       <Navbar/>
       <NavBottom/>
       <main>
