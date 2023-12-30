@@ -21,7 +21,7 @@ export default function Footer() {
                         ></Image>
                     </Link>
 
-                    <div className="flex w-full items-start justify-between">
+                    <div className="fwrap flex w-full items-start justify-between">
                     <nav className="w-fit p-2 text-white thin-text">
                       <h3>BHFS</h3>
                         <ul className="nopad">
@@ -29,16 +29,25 @@ export default function Footer() {
                                 <Link href="/">Home</Link>
                             </li>
                             <li>
-                                <Link href="/">Services</Link>
+                                <Link href="/services">Services</Link>
                             </li>
                             <li>
-                                <Link href="/">Products</Link>
+                                <Link href="/products">Products</Link>
                             </li>
                             <li>
-                                <Link href="/">Explore</Link>
+                                <Link href="/explore">Explore</Link>
                             </li>
                             <li>
-                                <Link href="/">Posts</Link>
+                                <Link href="/posts">Posts</Link>
+                            </li>
+                            <li>
+                                <Link href="/">Mail</Link>
+                            </li>
+                            <li>
+                                <Link href="/contact-us/contact-form">Contact form</Link>
+                            </li>
+                            <li>
+                                <Link href="/">Locate us</Link>
                             </li>
                         </ul>
                     </nav>
@@ -47,16 +56,19 @@ export default function Footer() {
                       <h3>About</h3>
                         <ul className="nopad">
                             <li>
-                                <Link href="/">Locate</Link>
+                                <Link href="/about-us">About us</Link>
                             </li>
                             <li>
-                                <Link href="/">Contact</Link>
+                                <Link href="/">How it works</Link>
                             </li>
                             <li>
-                                <Link href="/">Contact Form</Link>
+                                <Link href="/">Team</Link>
                             </li>
                             <li>
-                                <Link href="/">Help & support</Link>
+                                <Link href="/">Developer</Link>
+                            </li>
+                            <li>
+                                <Link href="/contact-us">Contact us</Link>
                             </li>
                         </ul>
                     </nav>
@@ -65,13 +77,16 @@ export default function Footer() {
                       <h3>Partners</h3>
                         <ul className="nopad">
                             <li>
-                                <Link href="/">Instagram</Link>
+                                <Link href="/">Instagram.com</Link>
                             </li>
                             <li>
-                                <Link href="/">Facebook</Link>
+                                <Link href="/">Facebook.com</Link>
                             </li>
                             <li>
-                                <Link href="/">GitHub</Link>
+                                <Link href="/">GitHub.com</Link>
+                            </li>
+                            <li>
+                                <Link href="/">Google.com</Link>
                             </li>
                         </ul>
                     </nav>

@@ -30,11 +30,21 @@
     font-family: sans-serif;
 }
 
+.fwrap{
+    flex-wrap: wrap;
+}
+
 .flex nav >h3{
+    padding-bottom: 8px;
     font-size: 16px;
 }
 
 .nopad li >a{
     padding: 0px;
     padding-bottom: 4px;
+}
+
+.nopad li >a:hover{
+    background-color: transparent;
+    text-decoration: underline;
 }

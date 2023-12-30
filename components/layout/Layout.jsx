@@ -1,18 +1,18 @@
+"use client";
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import NavBottom from '../navbar/NavBottom'
 import Footer from '../footer/Footer'
-import Head from 'next/head'
+import UnderDevelopment from '@/components/common/UnderDevelopment'
 
-export const Layout = ({children, title}) => {
+export const Layout = ({children}) => {
   return (
     <div>
-        <Head>
-            <title>{title}</title>
-        </Head>
         <Navbar/>
         <NavBottom/>
-        <main className="w-11/12 m-auto">{children}</main>
+        <main className="w-11/12 m-auto">{children}
+        <UnderDevelopment/>
+        </main>
         <Footer/>
     </div>
   )

@@ -7,7 +7,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import ExploreIcon from "@mui/icons-material/Explore";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <div
-        id="top"
+            id="top"
             className={`navbar w-full bg-white h-fit ${
                 scrolled ? "shadow" : ""
             }`}
@@ -42,11 +42,12 @@ export default function Navbar() {
             <div className="nav_top flex w-11/12 m-auto items-center justify-between">
                 <div className="left">
                     <Link href="/" className="w-fit">
-                        <Image 
-                        src="/logo.png"
-                        width={100}
-      height={100}
-      alt="Picture of the author"/>
+                        <Image
+                            src="/logo.png"
+                            width={100}
+                            height={100}
+                            alt="Picture of the author"
+                        />
                     </Link>
                 </div>
                 <div className="right flex h-full">
@@ -106,10 +107,10 @@ export default function Navbar() {
                                     </Link>
                                 </li>
                                 <li>
-                                <Link href="/products">
-                                    <LocalMallOutlinedIcon /> Products
-                                </Link>
-                            </li>
+                                    <Link href="/products">
+                                        <LocalMallOutlinedIcon /> Products
+                                    </Link>
+                                </li>
                                 <li>
                                     <Link href="/explore">
                                         <ExploreIcon /> Explore

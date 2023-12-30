@@ -1,12 +1,14 @@
-"use client";
 import React from 'react'
 import { Layout } from '@/components/layout/Layout'
 
+export const metadata = {
+  title: "BHFS - Help & Support",
+}
+
 export default function help() {
-    const pageTitle = 'Home Page Title';
   return (
     <div>
-        <Layout title={pageTitle}>
+        <Layout>
             <div className="help-section">
                 Help
             </div>
