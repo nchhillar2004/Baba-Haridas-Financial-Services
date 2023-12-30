@@ -1,3 +1,40 @@
 .footer{
     background-color: var(--primary-bg-color);
 }
+
+.back-on-top{
+    height: fit-content;
+    color: white;
+    background-color: var(--secondary-bg-color);
+}
+
+.back-on-top a{
+    padding: 5px 0px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.footer_container hr{
+    margin: 5px 0px;
+}
+
+.back-on-top a:hover{
+    background-color: #363e4b;
+}
+
+.copyright{
+    font-size: 12px;
+    font-weight: 100 !important;
+    font-family: sans-serif;
+}
+
+.flex nav >h3{
+    font-size: 16px;
+}
+
+.nopad li >a{
+    padding: 0px;
+    padding-bottom: 4px;
+}

@@ -23,7 +23,7 @@ export default function Home({children}) {
       <Navbar/>
       <NavBottom/>
       <main>
-        Home Page
+        {children}
       </main>
       <Footer/>
     </div>

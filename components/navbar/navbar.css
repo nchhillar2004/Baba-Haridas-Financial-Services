@@ -58,10 +58,15 @@ ul > li > a {
     height: 100%;
     margin-right: 2px;
     display: flex;
-    width: 94px;
-    justify-content: space-around;
+    width: fit-content;
+    text-wrap: nowrap;
+    justify-content: flex-start;
     margin-right: 6px;
     align-items: center;
+}
+
+li >a >svg{
+    margin-right: 6px !important;
 }
 
 ul > li > a:hover {
@@ -106,6 +111,14 @@ ul > li > a:hover {
     padding: 20px;
 }
 
+.sidebar-content ul >li{
+    margin-bottom: 6px !important;
+}
+
+.mobile-menu-toggle button{
+    color: white;
+}
+
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex;
@@ -128,7 +141,19 @@ ul > li > a:hover {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 980px) {
+    .desktop-menu {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
+    }
+    .tab-hide{
+        display: none !important;
+    }
+}
+
+@media (min-width: 1025px) {
     .mobile-menu-toggle {
         display: none;
     }

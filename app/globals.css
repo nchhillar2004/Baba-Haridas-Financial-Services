@@ -18,12 +18,12 @@ html, body{
   --light-blue-color: #1772eb;
   --dark-blue-color: #082e60;
 }
-
+ 
 button{
   border-radius: 4px;
 }
 
 main{
   padding: 10px;
-  min-height: 20vh;
+  min-height: 40vh;
 }

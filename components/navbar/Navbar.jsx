@@ -6,8 +6,10 @@ import { IconButton } from "@mui/material";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import ExploreIcon from "@mui/icons-material/Explore";
 import NewspaperOutlinedIcon from "@mui/icons-material/NewspaperOutlined";
-import ContactPhoneRoundedIcon from "@mui/icons-material/ContactPhoneRounded";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -32,15 +34,20 @@ export default function Navbar() {
 
     return (
         <div
+        id="top"
             className={`navbar w-full bg-white h-fit ${
                 scrolled ? "shadow" : ""
             }`}
         >
             <div className="nav_top flex w-11/12 m-auto items-center justify-between">
                 <div className="left">
-                    <a href="/">
-                        <img src="" alt="Baba Haridas Finance Logo" />
-                    </a>
+                    <Link href="/" className="w-fit">
+                        <Image 
+                        src="/logo.png"
+                        width={100}
+      height={100}
+      alt="Picture of the author"/>
+                    </Link>
                 </div>
                 <div className="right flex h-full">
                     <nav
@@ -50,66 +57,76 @@ export default function Navbar() {
                     >
                         <ul className="mr-4 h-full">
                             <li>
-                                <a href="/">
+                                <Link href="/">
                                     <HomeOutlinedIcon /> Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/services">
+                                <Link href="/services">
                                     <AttachMoneyIcon /> Services
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/explore">
+                                <Link href="/products">
+                                    <LocalMallOutlinedIcon /> Products
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/explore">
                                     <ExploreIcon /> Explore
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/posts">
+                                <Link href="/posts">
                                     <NewspaperOutlinedIcon /> Posts
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="/about-us">About Us</a>
+                                <Link href="/about-us">About Us</Link>
                             </li>
                         </ul>
-                        <a href="/contact-us" className="contact-us">
+                        <Link href="/contact-us" className="contact-us">
                             Contact us
-                        </a>
+                        </Link>
                     </nav>
 
                     <div
                         className={`sidebar ${showMobileMenu ? "active" : ""}`}
                     >
-                        <div className="sidebar-content flex h-1/2 justify-around flex-col w-1/2">
+                        <div className="sidebar-content flex h-fit justify-around flex-col w-1/2">
                             <ul className="flex flex-col h-2/3 justify-between">
                                 <li>
-                                    <a href="/">
+                                    <Link href="/">
                                         <HomeOutlinedIcon /> Home
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/services">
+                                    <Link href="/services">
                                         <AttachMoneyIcon /> Services
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/explore">
+                                <Link href="/products">
+                                    <LocalMallOutlinedIcon /> Products
+                                </Link>
+                            </li>
+                                <li>
+                                    <Link href="/explore">
                                         <ExploreIcon /> Explore
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/posts">
+                                    <Link href="/posts">
                                         <NewspaperOutlinedIcon /> Posts
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
-                                    <a href="/about-us">About Us</a>
+                                    <Link href="/about-us">About Us</Link>
                                 </li>
                             </ul>
-                            <a href="/contact-us" className="contact-us">
+                            <Link href="/contact-us" className="contact-us">
                                 Contact us
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
