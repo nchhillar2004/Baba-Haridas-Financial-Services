@@ -1,5 +1,6 @@
 import React from "react";
 import { Divider } from "@mui/material";
+import {Icon} from "@mui/material";
 
 export default function PostAds(props) {
     return (
@@ -10,6 +11,7 @@ export default function PostAds(props) {
                         <b>{props.heading}</b>
                     </div>
                     <a className="adright" href={props.href}>
+                        <Icon>{props.icon}</Icon>
                         {props.link}
                     </a>
                 </div>

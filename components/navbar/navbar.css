@@ -39,6 +39,10 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
+.left >a svg, .right2 >a svg{
+    margin-right: 4px;
+}
+
 .right > nav > ul {
     margin: 0px;
     padding: 0px;
@@ -82,7 +86,6 @@ ul > li > a:hover {
     display: flex;
     align-items: center;
     text-wrap: nowrap;
-    overflow: hidden;
     height: 100%;
     padding-left: 8px !important;
     padding-right: 8px !important;

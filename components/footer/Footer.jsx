@@ -3,6 +3,7 @@ import "./footer.css";
 import { Divider } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import AdminButton from "../common/AdminButton";
 
 export default function Footer() {
     return (
@@ -105,7 +106,7 @@ export default function Footer() {
                             </li>
                         </ul>
                     </nav>
-                    
+                    <AdminButton/>
                     </div>
                 </div>
                 <Divider color="whitesmoke" />

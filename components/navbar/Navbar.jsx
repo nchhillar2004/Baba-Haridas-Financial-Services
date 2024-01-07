@@ -11,7 +11,7 @@ import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [scrolled, setScrolled] = useState(false);
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -41,13 +41,14 @@ export default function Navbar() {
         >
             <div className="nav_top flex w-11/12 m-auto items-center justify-between">
                 <div className="left">
-                    <Link href="/" className="w-fit">
+                    <Link href="/" className="w-fit">   
                         <Image
                             src="/logo.png"
                             width={100}
                             height={100}
                             alt="Picture of the author"
                         />
+                        <h1 className="text-white text-2xl ml-5 font-semibold">{props.title}</h1>
                     </Link>
                 </div>
                 <div className="right flex h-full">

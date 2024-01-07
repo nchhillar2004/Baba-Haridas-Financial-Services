@@ -6,7 +6,10 @@ export const fetchPosts = async () => {
         const posts = await res.json();
         return posts;
     } catch (error) {
-        console.error("Error fetching posts:", error);
-        return [];
+        console.error("Error fetching posts");
+        const noPosts = {
+            description: "No posts available.",
+        };
+        return [noPosts];
     }
 };

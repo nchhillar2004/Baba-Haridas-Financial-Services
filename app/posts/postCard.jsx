@@ -12,7 +12,7 @@ const PostCard = ({ post }) => {
             <p>{post.description}</p>
         </div>
         <div className="pcard-bottom">
-           <p className='from-neutral-700 text-xs'>Date: {post.date}</p>
+           <p className='from-neutral-700 text-xs'>{post.date}</p>
         </div>
     </div>
   );
