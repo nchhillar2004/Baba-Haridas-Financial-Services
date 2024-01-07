@@ -13,9 +13,9 @@ export default function Footer() {
             </div>
             <div className="footer_container py-3.5 w-11/12 m-auto">
                 <div className="footer-top flex h-fit w-full flex-col">
-                    <Link href="/" className="w-fit">
+                    <Link href="/" className="image-link w-fit">
                         <Image
-                            src="/logo.png"
+                            src="/icon.png"
                             width={120}
                             height={120}
                             alt="BHFS Logo"

@@ -1,37 +1,45 @@
 'use client'
-import React from "react";
+import { useState, useEffect } from "react";
 import AdminLayout from "@/components/layout/AdminLayout";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { redirect } from "next/navigation";
-import { Layout } from "@/components/layout/Layout";
 
-// export const metadata = {
-//     title: "BHFS - Admin",
-// };
+function Page() {
+    const [isAdmin, setIsAdmin] = useState(false);
 
-function page() {
-    const { data: session } = useSession({
-        required: true,
-        onUnauthenticated() {
-            redirect("/");
-        },
-    });
-    if (session) {
-        return (
-            <div>
-                <AdminLayout>
-                    <main>Admin page</main>
-                </AdminLayout>
-            </div>
-        );
+    useEffect(() => {
+        const adminAuth = async () => {
+            try {
+                const res = await fetch("http://localhost:8080/api/checkAuth", {
+                    method: "GET",
+                    credentials: "include",
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    setIsAdmin(data.isAdmin);
+                } else if (res.status === 403) {
+                    window.location.href = '/';
+                }
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        };
+
+        adminAuth();
+    }, []);
+
+    if (!isAdmin) {
+        return <p>Access Denied.</p>;
     }
+
     return (
         <div>
-            <Layout>
-                <main>Admin acess denied. You are not allowed to view this page.</main>
-            </Layout>
+            <AdminLayout>
+                <main>
+                    Admin page
+                </main>
+            </AdminLayout>
         </div>
     );
 }
 
-export default page;
+export default Page;

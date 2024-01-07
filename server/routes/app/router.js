@@ -1,8 +1,8 @@
 const express = require("express");
 const router = new express.Router();
-const Products = require("../models/productSchema");
-const Users = require("../models/userSchema");
-const Posts = require("../models/postSchema");
+const Products = require("../../models/productSchema");
+const Users = require("../../models/userSchema");
+const Posts = require("../../models/postSchema");
 const bcrypt = require("bcryptjs");
 
 // get posts data api
@@ -11,7 +11,7 @@ router.get("/posts", async (req, res) => {
         const postsData = await Posts.find();
         res.status(201).json(postsData);
     } catch (error) {
-        console.log("error" + error.message);
+        console.log("Error in POSSTTSS" + error.message);
     }
 });
 
@@ -20,7 +20,7 @@ router.post("/newpost", async (req, res) => {
     const { title, description, imageUrl, date, author } = req.body;
 
     if (!title || !description) {
-        res.status(422).json({ error: "fill the all data" });
+        res.status(422).json({ error: "FILL ALL THE DAAATTAA" });
         console.log("Fill title and description");
         return;
     }
@@ -50,7 +50,7 @@ router.get("/getproducts", async (req, res) => {
         const productsData = await Products.find();
         res.status(201).json(productsData);
     } catch (error) {
-        console.log("error" + error.message);
+        console.log("ERRROORRRRRRRR IN PRODUCTSSSS" + error.message);
     }
 });
 

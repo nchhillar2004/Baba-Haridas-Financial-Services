@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import toast from "react-hot-toast";
 import "./loading.css";
-import { checkAdmin } from "@/middleware/checkAdmin";
 
 const customStyles = {
     content: {
@@ -36,23 +35,43 @@ const AdminButton = () => {
         setPassword("");
     };
 
-    const handlePasswordSubmit = (e) => {
+    const handlePasswordSubmit = async (e) => {
         e.preventDefault();
-        if (checkAdmin(password)) {
-            toast.success("Access granted");
-            window.location.href = "/admin";
-        } else {
-            toast.error("Access denied");
+        try {
+            const response = await fetch(
+                "http://localhost:8080/api/adminLogin",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ password }),
+                }
+            );
+            console.log(password);
+            const data = await response.json();
+            if (data.success && response.status === 201) {
+                toast.success("Access granted");
+                window.location.href = "/admin";
+            } else {
+                toast.error("Access denied");
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error("Error occurred");
         }
     };
 
     return (
         <div>
-            <button onClick={openModal} className="text-white">Admin</button>
+            <button onClick={openModal} className="text-white">
+                Admin
+            </button>
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 style={customStyles}
+                ariaHideApp={false}
             >
                 <h2>Enter Admin Password</h2>
                 <form onSubmit={handlePasswordSubmit} className="adminlogin">

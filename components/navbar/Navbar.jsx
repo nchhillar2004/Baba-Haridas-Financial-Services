@@ -41,9 +41,10 @@ export default function Navbar(props) {
         >
             <div className="nav_top flex w-11/12 m-auto items-center justify-between">
                 <div className="left">
-                    <Link href="/" className="w-fit">   
+                    <Link href="/" className="image-link w-fit">   
                         <Image
-                            src="/logo.png"
+                        priority={true}
+                            src="/icon.png"
                             width={100}
                             height={100}
                             alt="Picture of the author"

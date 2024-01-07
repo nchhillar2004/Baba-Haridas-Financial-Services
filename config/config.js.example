@@ -1,5 +1,0 @@
-const config = {
-    ADMIN_PASSWORD: "abcd",
-};
-
-export default config;
