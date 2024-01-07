@@ -1,4 +1,3 @@
-"use client";
 import toast from "react-hot-toast";
 import Notification from "@/components/navbar/new-updates/Notification";
 import { Layout } from "@/components/layout/Layout";

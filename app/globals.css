@@ -7,6 +7,7 @@ html, body{
   height: 100%;
   padding: 0px;
   margin: 0px;
+  background-color: #fcfcfd;
   font-size: 16px;
   font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
@@ -24,10 +25,20 @@ button{
 }
 
 main{
-  padding: 10px;
+  padding: 10px 0px;
   min-height: 40vh;
 }
 
 .right-notification button{
   color: white;
+}
+
+.postcard{
+  box-shadow: 0 1px 2px #12151b40;
+}
+
+.ad a{
+  color: #e60278;
+  font-weight: 600;
+  font-size: 14px;
 }
